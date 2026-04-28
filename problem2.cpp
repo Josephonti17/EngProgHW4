@@ -1,21 +1,3 @@
-// Problem 2 - NumberList (Operator Overloading + Custom Container)
-// EE 5102 / EE 4953 - Homework 4
-// Joseph
-//
-// NumberList is a dynamically-sized array of ints with a bunch of overloaded
-// operators bolted on. Since we manage raw memory with new[]/delete[], we
-// also have to follow the Rule of Three (copy ctor, copy-assignment, dtor).
-//
-// Operator design notes:
-//   +    binary, returns a brand-new list (concatenation), implemented in
-//        terms of += so the logic lives in one place.
-//   +=   member function, mutates *this and returns by reference for chaining.
-//   ==   compares size and every element.
-//   <    lexicographic comparison (like std::vector does).
-//   []   const + non-const versions for read/write access.
-//   ++   prefix returns a reference, postfix returns a value (the old state)
-//        and takes a dummy int parameter to disambiguate.
-//   <<   friend, prints "[a, b, c]" formatted output.
 
 #include <iostream>
 #include <stdexcept>
@@ -23,7 +5,7 @@
 
 class NumberList {
 public:
-    // ---- constructors / destructor ----
+    //nconstructors / destructor 
 
     // Empty list
     NumberList() : size_(0), data_(nullptr) {}
@@ -63,11 +45,11 @@ public:
         delete[] data_;
     }
 
-    // ---- observers ----
+    // observers 
 
     std::size_t size() const { return size_; }
 
-    // ---- subscript ----
+    // subscript 
     // Throw on out-of-range to make bugs visible during testing.
 
     int& operator[](std::size_t i) {
