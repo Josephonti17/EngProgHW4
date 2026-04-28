@@ -1,7 +1,3 @@
-// Problem 1 - SimpleString (Copy Control / Value-Like Semantics)
-// EE 5102 / EE 4953 - Homework 4
-// Joseph
-//
 // SimpleString manages its own char* buffer and acts like a value type.
 // Because we're using dynamic memory, the synthesized copy ctor and
 // copy-assignment would just copy the pointer, which would let two objects
@@ -61,11 +57,11 @@ public:
         delete[] data_;
     }
 
-    // ---- observers ----
+    // observers
 
     std::size_t size() const { return size_; }
 
-    // ---- subscript operators ----
+    // subscript operators 
     // Non-const version returns a reference so callers can modify a character.
     // Const version returns by value (or const ref) so a const SimpleString
     // can still be read but not written to.
@@ -78,7 +74,7 @@ public:
         return data_[i];
     }
 
-    // ---- equality ----
+    // equality
 
     friend bool operator==(const SimpleString& a, const SimpleString& b) {
         if (a.size_ != b.size_) return false;
@@ -89,7 +85,7 @@ public:
         return !(a == b);
     }
 
-    // ---- output ----
+    // output
 
     friend std::ostream& operator<<(std::ostream& os, const SimpleString& s) {
         os << s.data_;
@@ -108,11 +104,8 @@ private:
     char*       data_;   // owned - always points to a buffer of size_+1
 };
 
-
-// ---------------------------------------------------------------------------
 // Driver - demonstrates that copies are independent and modifying one
 // SimpleString doesn't bleed into another.
-
 int main() {
     std::cout << "=== SimpleString demo ===\n\n";
 
