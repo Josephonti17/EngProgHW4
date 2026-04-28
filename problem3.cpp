@@ -1,7 +1,3 @@
-// Problem 3 - Polymorphic Library Checkout System
-// EE 5102 / EE 4953 - Homework 4
-// Joseph
-//
 // LibraryItem is an abstract base class with two pure virtuals:
 //   lateFee(int days) - polymorphic late-fee calculation
 //   clone()           - virtual copy constructor for safe duplication
@@ -30,7 +26,6 @@
 #include <string>
 #include <vector>
 
-// ---------------------------------------------------------------------------
 // Abstract base class
 
 class LibraryItem {
@@ -69,8 +64,6 @@ std::ostream& operator<<(std::ostream& os, const LibraryItem& item) {
     return os;
 }
 
-
-// ---------------------------------------------------------------------------
 // Derived: Book - flat per-day late fee
 
 class Book : public LibraryItem {
@@ -96,8 +89,6 @@ private:
     std::string author_;
 };
 
-
-// ---------------------------------------------------------------------------
 // Derived: DVD - higher per-day fee, but capped
 
 class DVD : public LibraryItem {
@@ -126,8 +117,6 @@ private:
     int runtime_;
 };
 
-
-// ---------------------------------------------------------------------------
 // Driver
 
 int main() {
