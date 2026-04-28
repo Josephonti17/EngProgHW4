@@ -1,7 +1,3 @@
-// Bonus - SmartBuffer (Move Semantics & Performance)
-// EE 5102 / EE 4953 - Homework 4
-// Joseph
-//
 // SmartBuffer manages a dynamically allocated int array and follows the
 // "Rule of Five": copy ctor, copy-assignment, move ctor, move-assignment,
 // destructor. Each copy/move operation prints a message so we can watch
@@ -26,7 +22,7 @@
 
 class SmartBuffer {
 public:
-    // ---- constructors / destructor ----
+    //constructors / destructor
 
     explicit SmartBuffer(std::size_t n = 0, const std::string& tag = "")
         : size_(n), data_(n ? new int[n] : nullptr), tag_(tag) {
@@ -116,8 +112,6 @@ SmartBuffer makeBuffer(std::size_t n, const std::string& tag) {
     return local;
 }
 
-
-// ---------------------------------------------------------------------------
 // Driver
 
 int main() {
