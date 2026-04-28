@@ -114,7 +114,7 @@ d    = readonly
 
 Done.
 ```
-*(Screenshot placeholder: insert `problem1_output.png` here)*
+![Problem 1 output](problem1_output.png)
 
 ### Problem 2
 ```
@@ -147,7 +147,7 @@ a = [3, 4, 5]  (still valid)
 
 Done.
 ```
-*(Screenshot placeholder: insert `problem2_output.png` here)*
+![Problem 2 output](problem2_output.png)
 
 ### Problem 3
 ```
@@ -181,7 +181,7 @@ Cloned:    Book   [B001] "The C++ Programming Language" by Bjarne Stroustrup
 Freeing catalog...
 Done.
 ```
-*(Screenshot placeholder: insert `problem3_output.png` here)*
+![Problem 3 output](problem3_output.png)
 
 ### Bonus
 ```
@@ -213,7 +213,7 @@ push_back #3 -- this one forces reallocation:
   [MOVE]  move-ctor stole buffer (size 2)   <-- existing v1 moved to new buffer
   ...
 ```
-*(Screenshot placeholder: insert `bonus_output.png` here)*
+![Bonus output](bonus_output.png)
 
 ## Notes
 - All programs avoid global variables, follow C++11 syntax, and use `std::` prefixes (no `using namespace std;`).
